@@ -31,26 +31,160 @@
 
       /* Write CSS Here */
 
+      .two-column-grid__expand-two {
+        display:grid;
+        grid-template-columns: 100px 1fr;
+        gap: 2px;
+      }
+
+      .logo {
+        padding:4px;
+        border:2px dotted green;
+        display: grid;
+        place-items: center;
+      }
+
+      .box expand {
+        margin: 2px;
+        border:2px dotted red;
+        display:grid;
+        place-items: center;
+
+      }
+
       .three-column-grid {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2px;
+      }
+
+      .box {
+        display:grid;
+        place-items: center;
       }
 
       .three-column-grid__expand-two {
+
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        gap:2px;
+      }
+
+      .box-expand {
+        display: grid;
+        place-items: center;
+        border: 2px dotted red;
+        padding: 4px;
+        margin:2px;
+      }
+
+      .box1 {
+        display: grid;
+        place-items: center;
+        border: 2px dotted red;
+        min-height: 40px;
+        padding: 4px;
+        margin:2px;
+        
       }
 
       .five-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+        gap:2px;
       }
+
+
 
       .center-grid {
+        display: grid;
+        place-items: center;
       }
 
-      .centered {
+      .box-centered {
+        display: grid;
+        border: 2px dotted palevioletred;
+        min-height: 40px;
+        min-width: 200px;
+        padding:4px;
+        margin:2px;
       }
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
-      .two-column-grid {
+      .two-column-grid-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2px;
       }
+
+      .box-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: 2px dotted red;
+        padding: 4px;
+      }
+
+      .box-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        border: 2px dotted red;
+        padding:4px;
+      }
+
+      .inner-box {
+        display: grid;
+        margin:2px;
+
+      }
+
+      .three-column-grid-3 {
+        display: grid;
+        grid-template-columns: 62px 1fr 165px;
+  
+
+      }
+
+      .three-column-grid-3 .box-expand {
+        place-items: center;
+        grid-template-columns: 1fr;
+        
+      }
+
+      .inner-box-width-sm {
+        display: grid;
+        
+        min-height: 100%;
+        min-width: 100%;
+        border: 2px dotted green;
+        margin: 5px;
+      }
+
+      .three-column-grid-3 .box1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2px;
+      }
+      
+      .box2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        border: 2px dotted red;
+        min-height: 40px;
+        padding: 4px;
+        margin:2px;
+      }
+
+      .inner-box {
+        display: grid;
+        
+        margin:2px;
+      }
+    
+
     </style>
   </head>
   <body>
@@ -72,9 +206,9 @@
     <div>
       <h2>Three Column Grid with Expansion</h2>
       <div class="container three-column-grid__expand-two">
-        <div class="box"></div>
-        <div class="box expand"></div>
-        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box-expand"></div>
+        <div class="box1"></div>
       </div>
     </div>
     <div>
@@ -90,18 +224,18 @@
     <div>
       <h2>Center Grid</h2>
       <div class="container center-grid">
-        <div class="box centered"></div>
+        <div class="box-centered"></div>
       </div>
     </div>
     <div>
       <h2>Grid within Grid #1</h2>
-      <div class="container two-column-grid">
-        <div class="box">
+      <div class="container two-column-grid-2">
+        <div class="box-2">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
         </div>
-        <div class="box">
+        <div class="box-3">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
@@ -112,14 +246,14 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
-        <div class="box">
+      <div class="container three-column-grid-3">
+        <div class="box2">
           <div class="inner-box"></div>
         </div>
-        <div class="box expand">
-          <div class="inner-box width-sm"></div>
+        <div class="box-expand">
+          <div class="inner-box-width-sm"></div>
         </div>
-        <div class="box">
+        <div class="box1">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
